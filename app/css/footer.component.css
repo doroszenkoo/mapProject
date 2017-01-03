@@ -1,0 +1,14 @@
+ .page-section.dark > .container {
+  width: 100%;
+  height: 60px;
+    background-color: #303739;
+    color: #979797;
+}
+
+.dark a { color: #3f89d8}
+.dark a:hover { text-decoration: underline; }
+a:hover,
+a:active,
+a:focus {
+    color: #3f89d8;
+}

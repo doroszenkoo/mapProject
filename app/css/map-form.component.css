@@ -1,0 +1,25 @@
+
+.map-filter {
+    background-color: #333333;
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 0 15px;
+    position: absolute;
+    top: 175px;
+    z-index: 1;
+    /*
+    right: 15px;
+
+    */
+}
+
+.map-filter .filter-title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+.map-filter .btn {
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+}

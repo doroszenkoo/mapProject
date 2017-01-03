@@ -1,0 +1,172 @@
+.nav-container {
+    background-color: #333333;
+}
+.nav-container.affix {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+.navigation-container {
+    margin: 0;
+}
+.navigation-container > div:first-child {
+    padding-left: 0;
+}
+.navigation-container > div:last-child {
+    padding-right: 0;
+}
+@media (max-width: 767px) {
+    .navigation {
+        display: none;
+    }
+}
+
+/* superfish skin */
+.sf-menu {
+    float: none;
+    margin-bottom: 0;
+    margin-top: 2;
+}
+
+.sf-menu ul {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .2);
+    min-width: 12em; /* allow long menu items to determine submenu width */
+    *width: 12em; /* no auto sub width for IE7, see white-space comment below */
+}
+.sf-menu > li {
+    display: inline-block;
+    float: none;
+}
+
+.sf-menu > li.logo img {
+    margin: 0 15px;
+}
+@media (max-width: 1023px) {
+    .sf-menu > li.logo img {
+        margin: 0px;
+    }
+}
+.sf-menu a {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sf-menu a {
+        padding-right: 20px;
+    }
+}
+
+.sf-menu li,
+.sf-menu ul li,
+.sf-menu ul ul li {
+    background: #333333;
+}
+
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+    background-color: #333333;
+    color: #000000;
+}
+
+.sf-menu li:hover > a,
+.sf-menu li.sfHover > a {
+    color: #000000;
+}
+
+.sf-menu > li {
+    padding-bottom: 0px;
+    padding-top: 0px;
+
+}
+
+.sf-menu > li:hover,
+.sf-menu > li.sfHover {
+
+}
+
+.sf-menu > li > a {
+    border: 0;
+    border-top: 3px solid #333333;
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    padding: 17px 13px 18px;
+    position: relative;
+    text-decoration: none;
+}
+.sf-menu > li > a > small{
+    color: #777777;
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+.sf-menu > li .title {
+    bottom: 15px;
+    left: 20px;
+    position: absolute;
+}
+.sf-menu > li > a .icon {
+display: block;
+    position: relative;
+    text-align: center;
+    top: -10px;
+}
+.sf-menu > li a i {
+    box-shadow: none;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+    transition: box-shadow 0.6s ease-in-out 0s;
+}
+.sf-menu > li a .icon i {
+    background-color: #54576F;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 26px;
+    padding: 10px 0;
+    width: 46px;
+}
+.sf-menu > li a:hover i {
+    background-color: #54576F;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.4s ease-in-out 0s;
+}
+
+.sf-menu > li:hover > a,
+.sf-menu > li.sfHover > a,
+.sf-menu > li > a:hover,
+.sf-menu > li.active > a:hover,
+.sf-menu > li.active > a {
+    border-color: #3f89d8;
+    color: #ffffff;
+}
+.sf-menu > li:hover > a > small,
+.sf-menu > li.sfHover > a > small,
+.sf-menu > li > a:hover > small,
+.sf-menu > li.active > a:hover > small,
+.sf-menu > li.active > a > small {
+    color: #265585;
+}
+.sf-menu > li.active > a {
+
+}
+.sf-menu > li.active > a:focus {
+    color: #ffffff;
+}
+
+.sf-menu li:hover > a:before,
+.sf-menu li.sfHover > a:before {
+    background-color: #ffffff;
+}
+
+.sf-menu li,
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
