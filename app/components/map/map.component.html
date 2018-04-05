@@ -1,0 +1,20 @@
+<map-form (notify)='onNotify($event)'></map-form>
+<div id="headersearch" class="headersearch">
+  <input placeholder="Enter source location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupOriginInput [formControl]="originInput">
+  <input placeholder="Enter destination" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupDestinationInput [formControl]="destinationInput" >
+  <input placeholder="Enter map center " class="form-control" #mapCenter value="" name="s" id="hs-search" type="text">
+</div>
+<sebm-google-map
+  [latitude]="latitude" 
+  [longitude]="longitude" 
+  [zoom]="zoom"
+  [styles]="mapCustomStyles">
+    <!--sebm-google-map-marker 
+      [latitude]="latitude" 
+      [longitude]="longitude" 
+      [markerDraggable]="draggable" 
+      (dragEnd)="markerDragEnd($event)">
+    </sebm-google-map-marker-->
+     <sebm-google-map-directions [origin]="origin" [destination]="destination"></sebm-google-map-directions>
+</sebm-google-map>
+

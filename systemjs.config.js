@@ -26,7 +26,7 @@
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-	    'angular2-google-maps/core': 'npm:angular2-google-maps/core/core.umd.js',
+      'angular2-google-maps/core': 'npm:angular2-google-maps/core/core.umd.js',
       'angular2-google-map-auto-complete/directives/googleplace.directive': 'npm:angular2-google-map-auto-complete/directives/googleplace.directive.js',
       'moment': 'npm:moment/moment.js',
       'ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',

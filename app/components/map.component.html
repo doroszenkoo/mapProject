@@ -1,7 +1,0 @@
-<map-form (notify)='onNotify($event)'></map-form>
-<div id="headersearch" class="headersearch" style="">
-  <input class="hs-input" #mapSearch value="" name="s" id="hs-search" type="text">
-</div>
-<sebm-google-map [latitude]="latitude" [longitude]="longitude">
-  <sebm-google-map-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="draggable" (dragEnd)="markerDragEnd($event)"></sebm-google-map-marker>
-</sebm-google-map>

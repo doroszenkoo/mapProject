@@ -8,23 +8,24 @@
                     <h4 class="modal-title" id="ModalLabelL">Please, sign in to your account</h4>
                 </div>
                 <div class="modal-body">
-                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
                     <form class="" role="form" [formGroup]="signIn" (ngSubmit)="validateSignInData($event)">
                         <div class="form-group">
                             <label>Email</label>
                             <input formControlName="email" id="txtEmail" class="form-control" type="email">
-														<div *ngIf="signIn.controls['email'].hasError('required') && signIn.controls['email'].touched" class="alert alert-danger">Email field cannot be empty</div>
-														<div *ngIf="signIn.controls['email'].hasError('pattern') && signIn.controls['email'].touched" class="alert alert-danger">Wrong format of email</div>
+							<div *ngIf="signIn.controls['email'].hasError('required') && signIn.controls['email'].touched" class="alert alert-danger">Email field cannot be empty</div>
+							<div *ngIf="signIn.controls['email'].hasError('pattern') && signIn.controls['email'].touched" class="alert alert-danger">Wrong format of email</div>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
                             <input formControlName="password" id="txtPassword" class="form-control" type="password">
-															<div *ngIf="signIn.controls['password'].hasError('required') && signIn.controls['password'].touched" class="alert alert-danger">Password field cannot be empty</div>
+							<div *ngIf="signIn.controls['password'].hasError('required') && signIn.controls['password'].touched" class="alert alert-danger">Password field cannot be empty</div>
+							<div *ngIf="signIn.controls['password'].hasError('minlength') && signIn.controls['password'].touched" class="alert alert-danger">Password must be at least 8 signs</div>
+							<!--div *ngIf="signIn.controls['password'].hasError('maxlength') && signIn.controls['password'].touched" class="alert alert-danger">Password must less than 15 signs</div-->
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-																<input formControlName="check" id="checkbox" type="checkbox">
-																<label for="checkbox">Remember me</label>
+								<input formControlName="check" id="checkbox" type="checkbox">
+								<label for="checkbox">Remember me</label>
                             </div>
                             <div class="col-md-6">
                                 <button class="btn btn-success pull-right" [disabled]="!signIn.valid" type="submit">Sign In</button>
@@ -47,7 +48,6 @@
 								<h4 class="modal-title" id="ModalLabelR">Please, register to access all features</h4>
 						</div>
 						<div class="modal-body">
-								<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
 								<form class="" role="form"  [formGroup]="registerForm" (ngSubmit)="validateRegistrationData($event)">
 										<div class="form-group">
 												<label>Name</label>
@@ -60,15 +60,16 @@
 												<div *ngIf="registerForm.controls['email'].hasError('required') && registerForm.controls['email'].touched" class="alert alert-danger">Email field cannot be empty</div>
 												<div *ngIf="registerForm.controls['email'].hasError('pattern') && registerForm.controls['email'].touched" class="alert alert-danger">Wrong format of email</div>
 										</div>
-										<div class="form-group">
+										<div class="form-group"> <!--formGroupName="passwords"-->
 												<label>Password</label>
 												<input formControlName="password" id="regPassword" class="form-control" type="password">
 												<div *ngIf="registerForm.controls['password'].hasError('required') && registerForm.controls['password'].touched" class="alert alert-danger">Password field cannot be empty</div>
 										</div>
-										<div class="form-group">
+										<div class="form-group"> <!--formGroupName="passwords"-->
 												<label>Repeat Password</label>
 												<input formControlName="repassword" id="regRepeatPassword" class="form-control" type="password">
 												<div *ngIf="registerForm.controls['repassword'].hasError('required') && registerForm.controls['repassword'].touched" class="alert alert-danger">Repeat password field cannot be empty</div>
+												 <!--div *ngIf="registerForm.passwords?.errors?.areEqual">The two passwords aren't the same</div-->
 										</div>
 										<div class="row">
 												<div class="col-md-12">
